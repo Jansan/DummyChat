@@ -1,0 +1,49 @@
+﻿
+
+<div class="col-md-12">
+
+    <div class="col-md-6 col-md-offset-3">
+        <h2 class="text-warning">
+            <span>Channel:</span>
+            <span ng-bind="channel.name"></span>
+        </h2>
+        <div class="col-md-12" ng-repeat="message in channel.messages track by $index"
+             ng-if="channel.id==message.channelId">
+
+            <div class="col-md-8 sms-author">
+                <div class="sms">
+                    <h3 ng-bind="message.body"></h3>
+                </div>
+                <div class="author">
+                    <h5 class="text-muted">
+                        <span><strong>Author :</strong> </span>
+                        <span ng-bind="message.author"></span>
+                    </h5>
+                </div>
+            </div>
+
+            <div class="col-md-4 date">
+                <h5 ng-bind="message.timeSent | date:'medium'" class="text-muted"></h5>
+            </div>
+
+        </div><!--message col ends-->
+
+        <div class="col-md-12">
+            <form ng-submit="addNewMessage()">
+                <input type="text" ng-model="newMessage.channelId" ng-bind="newMessage.channelId=channel.id" />
+                <div class="form-group">
+                    <textarea type="text" ng-model="newMessage.body" class="form-control" placeholder="Write your message" rows="4"></textarea>
+
+                </div>
+                <div class="form-group">
+                    <input type="text" ng-model="newMessage.author" class="form-control" placeholder="Author" />
+                </div>
+                <button type="submit" class="btn btn-primary pull-right send-btn">Send</button>
+
+                <button type="reset" class="btn btn-default pull-right">Clear</button>
+            </form>
+
+        </div>
+
+    </div>
+</div>

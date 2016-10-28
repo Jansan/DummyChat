@@ -9,11 +9,28 @@ angular.module("mainModule")
             $locationProvider.html5Mode(true);
             $routeProvider
 
-                .when("/", {
-                    templateUrl: "Views/Home.html",
-                    controller: "HomeController",
+
+            .when("/", {
+                templateUrl: "Views/Channels.html",
+                controller: "ChannelsController",
+                caseInsensitiveMatch: true,
+                activeTab: "Channels"
+            })
+                .when("/Channel/:id", {
+                    templateUrl: "Views/Messages.html",
+                    controller: "ChannelController",
                     caseInsensitiveMatch: true,
-                    activeTab: "Home"
-                });
+                    activeTab: "Channels"
+                })
+            .when("/Admin", {
+                templateUrl: "Views/Admin.html",
+                controller: "AdminController",
+                caseInsensitiveMatch: true,
+                activeTab: "Admin"
+            })
+                // start page
+            .otherwise({
+                redirectTo: "/"
+            });
         }
     ]);

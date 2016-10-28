@@ -1,4 +1,6 @@
 ﻿@import url(../Content/bootstrap.min.css);
+@import url('../Content/themes/base/jquery-ui.css');
+
 
 /* Components */
 @import url(Components/navbar.css);
@@ -6,3 +8,38 @@
 
 /* Layout */
 @import url(Layout/layout.css);
+
+.sms-author{
+    background-color:#ceeff8;
+    border-radius:5px;
+    margin-bottom:10px;
+    
+}
+.date{
+    margin-top:18px;
+    background-color:#c6cfd0;
+    width:15%;
+    margin-left:10px;
+    border-radius:5px;
+    
+}
+
+.list-unstyled li{
+    background-color:#a2c1c4;
+    border-radius:5px;
+    padding:10px;
+    margin:20px;
+}
+
+.send-btn {
+    margin-left:10px;
+    margin-bottom:20px;
+}
+
+.admin-page{
+    padding-left:10px;
+}
+
+.create-channel{
+    margin-bottom:20px;
+}

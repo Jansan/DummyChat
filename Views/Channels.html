@@ -1,0 +1,12 @@
+﻿<div class="col-md-12">
+    <h1 ng-bind="title" class="text-warning"></h1>
+</div>
+<div class="col-md-6">
+    <ul class="list-unstyled">
+        <li ng-repeat="channel in models.channels track by $index">
+            <a href="" ng-click="go('/Channel/' + channel.id)"><h3 ng-bind="channel.name"></h3></a>
+        </li>
+    </ul>
+
+</div>
+
