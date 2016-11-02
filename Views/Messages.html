@@ -1,6 +1,4 @@
-﻿
-
-<div class="col-md-12">
+﻿<div class="col-md-12">
 
     <div class="col-md-6 col-md-offset-3">
         <h2 class="text-warning">
@@ -26,11 +24,11 @@
                 <h5 ng-bind="message.timeSent | date:'medium'" class="text-muted"></h5>
             </div>
 
-        </div><!--message col ends-->
+        </div>
 
         <div class="col-md-12">
             <form ng-submit="addNewMessage()">
-                <input type="text" ng-model="newMessage.channelId" ng-bind="newMessage.channelId=channel.id" />
+                <input type="hidden" ng-model="newMessage.channelId" ng-bind="newMessage.channelId=channel.id" />
                 <div class="form-group">
                     <textarea type="text" ng-model="newMessage.body" class="form-control" placeholder="Write your message" rows="4"></textarea>
 

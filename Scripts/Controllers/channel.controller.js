@@ -4,12 +4,12 @@
 angular.module("mainModule")
     .controller("ChannelController", [
         "$scope",
-        "$routeParams",       
-        "channelsApi",
+        "$routeParams",
         "$rootScope",
         "Hub",
+        "channelsApi",
         // main function
-        function ($scope, $routeParams, channelsApi, $rootScope, Hub) {
+        function ($scope, $routeParams, $rootScope, Hub, channelsApi) {
 
             $scope.newMessage = {};
 
@@ -61,7 +61,7 @@ angular.module("mainModule")
                     if (data != null) {
                         $scope.models.messages = data;
                     }
-                    
+
                 });
 
             // Getting Channel
@@ -90,5 +90,5 @@ angular.module("mainModule")
 
         }
 
-        
+
     ]);

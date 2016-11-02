@@ -1,5 +1,6 @@
 ﻿@import url(../Content/bootstrap.min.css);
 @import url('../Content/themes/base/jquery-ui.css');
+@import url('../Content/themes/base/all.css');
 
 
 /* Components */
@@ -9,37 +10,70 @@
 /* Layout */
 @import url(Layout/layout.css);
 
-.sms-author{
-    background-color:#ceeff8;
-    border-radius:5px;
-    margin-bottom:10px;
-    
-}
-.date{
-    margin-top:18px;
-    background-color:#c6cfd0;
-    width:15%;
-    margin-left:10px;
-    border-radius:5px;
-    
+.sms-author {
+    background-color: #ceeff8;
+    border-radius: 5px;
+    margin-bottom: 10px;
 }
 
-.list-unstyled li{
-    background-color:#a2c1c4;
-    border-radius:5px;
-    padding:10px;
-    margin:20px;
+.date {
+    margin-top: 18px;
+    background-color: #c6cfd0;
+    width: 15%;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.list-unstyled li {
+    background-color: #a2c1c4;
+    border-radius: 5px;
+    padding: 10px;
+    margin: 20px;
 }
 
 .send-btn {
-    margin-left:10px;
-    margin-bottom:20px;
+    margin-left: 10px;
+    margin-bottom: 20px;
 }
 
-.admin-page{
-    padding-left:10px;
+.admin-page {
+    padding-left: 10px;
 }
 
-.create-channel{
-    margin-bottom:20px;
+.create-channel {
+    margin-bottom: 20px;
 }
+
+.drop-channel {
+    width: 100%;
+    min-height: 600px;
+    border: 1px solid #0690e0;
+    background-color: #37bcd4;
+}
+
+.dragchannel {
+    z-index: 1;
+}
+
+.ui-state-highlight {
+    background-color: #b9e4fe !important;
+}
+
+.trashchannel {
+    width: 100%;
+    border: 3px inset rgba(255, 0, 0, 0.28);
+    min-height: 150px;
+}
+
+.trash-channel-hover {
+    min-height: 150px;
+}
+
+h1.trash-icon {
+    font-size: 100px;
+    text-align: center;
+    position: relative;
+    top: 15px;
+    color: rgba(255, 0, 0, 0.37);
+}
+

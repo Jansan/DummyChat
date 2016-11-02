@@ -9,6 +9,8 @@ angular.module("mainModule")
 
             $scope.newChannel = {};
 
+
+
             // Creating Channel
             $scope.addChannel = function () {
                 channelsApi.addChannel($scope.newChannel)

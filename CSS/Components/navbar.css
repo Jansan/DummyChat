@@ -1,20 +1,25 @@
 ﻿
 .navbar {
     border-radius: 0;
-    background-color:#0e8be9;
-    border:none;
+    background-color: #0e8be9;
+    border: none;
 }
+
 .navbar-inverse .navbar-brand {
-    color:white;
-    font-size:20px;
-    font-weight:300;
+    color: white;
+    font-size: 25px;
+    font-weight: 300;
 }
 
-.navbar-inverse .navbar-nav>li>a {
-    color:#ffffff;
+.navbar-inverse .navbar-nav > li > a {
+    color: #ffffff;
 }
 
-.navbar-inverse .navbar-nav>.active>a {
-    background-color:#052a57;
-    border:none;
+.navbar-inverse .navbar-nav > .active > a {
+    background-color: #052a57;
+    border: none;
+}
+
+.admin {
+    text-align: right;
 }

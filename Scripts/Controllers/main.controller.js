@@ -6,11 +6,11 @@ angular.module("mainModule")
         "$location",
         "$route",
         "channelsApi",
-        function ($scope, $location, $route, channelsApi ) {
+        function ($scope, $location, $route, channelsApi) {
             $scope.$route = $route;
             $scope.models = {
                 channels: [],
-                messages:[]
+                messages: []
             }
             // Get channels
             channelsApi.getChannels()
