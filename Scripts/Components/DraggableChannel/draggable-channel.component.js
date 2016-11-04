@@ -6,6 +6,7 @@ angular.module("mainModule")
             var scope = this;
             var component = {};
 
+            // Draggable function 
             setTimeout(function () {
                 component = $("#draggable-" + scope.id);
                 component.draggable({

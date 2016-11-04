@@ -5,9 +5,12 @@
             <span>Channel:</span>
             <span ng-bind="channel.name"></span>
         </h2>
+
+        <!--Message-->
         <div class="col-md-12" ng-repeat="message in channel.messages track by $index"
              ng-if="channel.id==message.channelId">
 
+            <!--Author-->
             <div class="col-md-8 sms-author">
                 <div class="sms">
                     <h3 ng-bind="message.body"></h3>
@@ -20,24 +23,28 @@
                 </div>
             </div>
 
+            <!--Formatera datumen-->
             <div class="col-md-4 date">
                 <h5 ng-bind="message.timeSent | date:'medium'" class="text-muted"></h5>
             </div>
 
         </div>
-
+        <!--Add new Message-->
         <div class="col-md-12">
             <form ng-submit="addNewMessage()">
                 <input type="hidden" ng-model="newMessage.channelId" ng-bind="newMessage.channelId=channel.id" />
+                <!--Write your message-->
                 <div class="form-group">
                     <textarea type="text" ng-model="newMessage.body" class="form-control" placeholder="Write your message" rows="4"></textarea>
 
                 </div>
+                <!--Write Author name-->
                 <div class="form-group">
                     <input type="text" ng-model="newMessage.author" class="form-control" placeholder="Author" />
                 </div>
-                <button type="submit" class="btn btn-primary pull-right send-btn">Send</button>
 
+                <send-button></send-button>
+                <!--Clear text-->
                 <button type="reset" class="btn btn-default pull-right">Clear</button>
             </form>
 

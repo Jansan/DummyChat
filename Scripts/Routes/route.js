@@ -9,19 +9,21 @@ angular.module("mainModule")
             $locationProvider.html5Mode(true);
             $routeProvider
 
-
+            // Channels page
             .when("/", {
                 templateUrl: "Views/Channels.html",
                 controller: "ChannelsController",
                 caseInsensitiveMatch: true,
                 activeTab: "Channels"
             })
+                // Messages page
                 .when("/Channel/:id", {
                     templateUrl: "Views/Messages.html",
                     controller: "ChannelController",
                     caseInsensitiveMatch: true,
                     activeTab: "Channels"
                 })
+                // Admin page
             .when("/Admin", {
                 templateUrl: "Views/Admin.html",
                 controller: "AdminController",

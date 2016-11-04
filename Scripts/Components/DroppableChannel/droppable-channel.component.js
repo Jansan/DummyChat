@@ -6,6 +6,7 @@ angular.module("mainModule")
             var scope = this;
             var component = {};
 
+            // Droppable function
             setTimeout(function () {
                 component = $('#dropchannel-' + scope.id);
                 component.droppable({

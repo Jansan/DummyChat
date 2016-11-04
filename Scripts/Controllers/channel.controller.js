@@ -71,12 +71,13 @@ angular.module("mainModule")
                 })[0];
             });
 
-
+            $scope.sent = false
             $scope.addNewMessage = function () {
                 channelsApi.postMessage($scope.newMessage)
                     .then(function (data) {
                         if (data != null) {
                             $scope.models.messages.push(data);
+                            $scope.sent = true;
                             $scope.newMessage = {};
                         }
 

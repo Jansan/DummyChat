@@ -76,4 +76,6 @@ h1.trash-icon {
     top: 15px;
     color: rgba(255, 0, 0, 0.37);
 }
-
+.channel-name{
+    padding-left:25px;
+}
